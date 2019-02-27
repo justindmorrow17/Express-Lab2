@@ -1,0 +1,9 @@
+
+<h3 class="title">List of items</h3>
+
+<div class="container" ng-repeat="item in $ctrl.cartItems track by $index">
+    <p>Id: {{ item.id }} </p>
+    <p>Name: {{ item.product }} </p>
+    <p>Price: {{ item.price | currency }} </p>
+    <p>Quantity: {{ item.quantity }} </p>
+</div>
