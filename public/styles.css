@@ -1,0 +1,51 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  background-image: url(https://buidln.clipdealer.com/001/239/167//previews/2--1239167-Shopping%20cart%20full%20of%20money.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.title {
+  text-align: center;
+}
+
+.form-container {
+  width: 80%;
+  margin: 0 auto;
+  transform: translateX(25%);
+  padding: 10px;
+}
+
+.update-btn {
+  border: none;
+  background-color: green;
+}
+
+section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-flow: row wrap;
+  height: 100%;
+  width: 60%;
+  margin: 0 auto;
+  background-color: rgb(230, 245, 255, .5);
+  border-radius: 8px;
+}
+
+.container {
+  background-color: rgb(199, 196, 196);
+  border-radius: 8px;
+  margin: 10px;
+  height: auto;
+  width: 150px;
+}
+
+.delete-btn {
+  background-color: #ff1818;
+  border: 2px solid black;
+
+}

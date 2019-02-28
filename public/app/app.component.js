@@ -15,16 +15,16 @@ const shoppingCart = {
       vm.cartItems = response.data;
     });
 
-    vm.addItems = (newItem) => {
-      CartService.addItems(newItem).then(handleResponse);
+    vm.addItem = (newItem) => {
+      CartService.addItem(newItem).then(handleResponse);
     };
 
-    vm.deleteItems = (id) => {
-      CartService.deleteItems(id).then(handleResponse);
+    vm.removeItem = (id) => {
+      CartService.removeItem(id).then(handleResponse);
     };
 
-    vm.editItems = (id, newItem) => {
-      CartService.editItems(id, newItem).then(handleResponse);
+    vm.updateItem = (item) => {
+      CartService.updateItem(item).then(handleResponse);
     };
   }]
 }

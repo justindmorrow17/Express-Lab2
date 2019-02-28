@@ -10,7 +10,7 @@ function CartService($http) {
     });
   };
 
-  self.addItems = (newItem) => {
+  self.addItem = (newItem) => {
     return $http({
       method: "POST",
       url: "/cart",
@@ -18,20 +18,20 @@ function CartService($http) {
     });
   };
 
-  self.deleteItems = (id) => {
+  self.removeItem = (id) => {
     return $http({
       method: "DELETE",
       url: `/cart/${id}`
     });
   };
 
-  self.editItems = (id, newItem) => {
+  self.updateItem = (item, id) => {
     return $http({
       method: "PUT",
       url: `/cart/${id}`,
-      data: { id: newItem }
-    })
-  }
+      data: {...item, quantity: Number(item.quantity)}
+    });
+  };
 }
 
 angular

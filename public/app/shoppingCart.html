@@ -1,9 +1,23 @@
 
-<h3 class="title">List of items</h3>
+<h2 class="title">List of items</h2>
 
-<div class="container" ng-repeat="item in $ctrl.cartItems track by $index">
-    <p>Id: {{ item.id }} </p>
-    <p>Name: {{ item.product }} </p>
-    <p>Price: {{ item.price | currency }} </p>
-    <p>Quantity: {{ item.quantity }} </p>
+<div class="form-container"> 
+<form ng-submit="$ctrl.addItem(newItem)">
+      <input type="text" placeholder="product" ng-model="newItem.product">
+      <input type="text" placeholder="price" ng-model="newItem.price">
+      <input type="text" placeholder="quantity" ng-model="newItem.quantity">
+      <button>Add Item</button>
+  </form>
+  
 </div>
+
+<section>
+  <div class="container" ng-repeat="item in $ctrl.cartItems track by $index">
+      <p>Id: {{ item.id }} </p>
+      <p>Name: {{ item.product }} </p>
+      <p>Price: {{ item.price | currency }} </p>
+      <p>Quantity: {{ item.quantity }} </p>
+      <button class="delete-btn" ng-click="$ctrl.removeItem(item.id)">X</button>
+      <button class="update-btn" ng-click="$ctrl.updateitem(item.id)">Update Qty</button>
+  </div>
+</section>  
